@@ -18,7 +18,6 @@ package com.google.cloud.secretmanager.v1beta1.it;
 import static org.junit.Assert.assertEquals;
 
 import com.google.cloud.ServiceOptions;
-import com.google.cloud.secretmanager.v1beta1.SecretManagerServiceClient;
 import com.google.cloud.secretmanager.v1beta1.AccessSecretVersionRequest;
 import com.google.cloud.secretmanager.v1beta1.AccessSecretVersionResponse;
 import com.google.cloud.secretmanager.v1beta1.AddSecretVersionRequest;
@@ -34,6 +33,7 @@ import com.google.cloud.secretmanager.v1beta1.ListSecretsRequest;
 import com.google.cloud.secretmanager.v1beta1.ProjectName;
 import com.google.cloud.secretmanager.v1beta1.Replication;
 import com.google.cloud.secretmanager.v1beta1.Secret;
+import com.google.cloud.secretmanager.v1beta1.SecretManagerServiceClient;
 import com.google.cloud.secretmanager.v1beta1.SecretName;
 import com.google.cloud.secretmanager.v1beta1.SecretPayload;
 import com.google.cloud.secretmanager.v1beta1.SecretVersion;
