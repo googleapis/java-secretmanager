@@ -1,5 +1,13 @@
 # Changelog
 
+### [0.3.1](https://www.github.com/googleapis/java-secretmanager/compare/v0.3.0...v0.3.1) (2020-03-30)
+
+
+### Dependencies
+
+* update dependency com.google.api:api-common to v1.9.0 ([#80](https://www.github.com/googleapis/java-secretmanager/issues/80)) ([cbe8764](https://www.github.com/googleapis/java-secretmanager/commit/cbe87647de41bff246336d377449fff1948f0823))
+* update dependency com.google.cloud:google-cloud-core to v1.93.1 ([#59](https://www.github.com/googleapis/java-secretmanager/issues/59)) ([403a628](https://www.github.com/googleapis/java-secretmanager/commit/403a6284cc4815849d177dd69a60fc049feddbf8))
+
 ## [0.3.0](https://www.github.com/googleapis/java-secretmanager/compare/v0.2.1...v0.3.0) (2020-02-28)
 
 
