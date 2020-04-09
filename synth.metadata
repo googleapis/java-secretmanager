@@ -1,6 +1,13 @@
 {
-  "updateTime": "2020-04-07T00:32:22.501541Z",
+  "updateTime": "2020-04-09T10:29:27.058867Z",
   "sources": [
+    {
+      "git": {
+        "name": ".",
+        "remote": "https://github.com/googleapis/java-secretmanager.git",
+        "sha": "c7354ea18aacd4df7df1e078481f4209c9c036ff"
+      }
+    },
     {
       "git": {
         "name": "googleapis",
