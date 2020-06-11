@@ -3,7 +3,7 @@
     {
       "git": {
         "name": ".",
-        "remote": "git@github.com:googleapis/java-secretmanager.git",
+        "remote": "https://github.com/googleapis/java-secretmanager.git",
         "sha": "e2a650019fe34394c258f7c43694351cf9f48adf"
       }
     },
