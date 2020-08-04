@@ -29,12 +29,6 @@ If you are using Maven with [BOM][libraries-bom], add this to your pom.xml file
     <groupId>com.google.cloud</groupId>
     <artifactId>google-cloud-secretmanager</artifactId>
   </dependency>
-  <dependency>
-    <groupId>com.google.protobuf</groupId>
-    <artifactId>protobuf-java-util</artifactId>
-    <version>3.12.4</version>
-  </dependency>
-
 </dependencies>
 
 ```
@@ -47,12 +41,6 @@ If you are using Maven without BOM, add this to your dependencies:
   <artifactId>google-cloud-secretmanager</artifactId>
   <version>1.1.0</version>
 </dependency>
-<dependency>
-  <groupId>com.google.protobuf</groupId>
-  <artifactId>protobuf-java-util</artifactId>
-  <version>3.12.4</version>
-</dependency>
-
 
 ```
 
