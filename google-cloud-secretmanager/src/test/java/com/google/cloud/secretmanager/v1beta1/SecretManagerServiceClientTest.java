@@ -192,7 +192,7 @@ public class SecretManagerServiceClientTest {
     mockSecretManagerService.addResponse(expectedResponse);
 
     ProjectName parent = ProjectName.of("[PROJECT]");
-    String secretId = "secret_id-739547894";
+    String secretId = "secretId945974251";
     Secret secret = Secret.newBuilder().build();
 
     Secret actualResponse = client.createSecret(parent, secretId, secret);
@@ -218,7 +218,7 @@ public class SecretManagerServiceClientTest {
 
     try {
       ProjectName parent = ProjectName.of("[PROJECT]");
-      String secretId = "secret_id-739547894";
+      String secretId = "secretId945974251";
       Secret secret = Secret.newBuilder().build();
       client.createSecret(parent, secretId, secret);
       Assert.fail("No exception raised");
@@ -239,7 +239,7 @@ public class SecretManagerServiceClientTest {
     mockSecretManagerService.addResponse(expectedResponse);
 
     String parent = "parent-995424086";
-    String secretId = "secret_id-739547894";
+    String secretId = "secretId945974251";
     Secret secret = Secret.newBuilder().build();
 
     Secret actualResponse = client.createSecret(parent, secretId, secret);
@@ -265,7 +265,7 @@ public class SecretManagerServiceClientTest {
 
     try {
       String parent = "parent-995424086";
-      String secretId = "secret_id-739547894";
+      String secretId = "secretId945974251";
       Secret secret = Secret.newBuilder().build();
       client.createSecret(parent, secretId, secret);
       Assert.fail("No exception raised");
