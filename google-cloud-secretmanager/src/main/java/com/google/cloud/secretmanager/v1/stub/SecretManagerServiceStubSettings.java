@@ -70,7 +70,6 @@ import com.google.iam.v1.TestIamPermissionsResponse;
 import com.google.protobuf.Empty;
 import java.io.IOException;
 import java.util.List;
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.threeten.bp.Duration;
 
@@ -169,7 +168,7 @@ public class SecretManagerServiceStubSettings
 
             @Override
             public Iterable<Secret> extractResources(ListSecretsResponse payload) {
-              return Objects.isNull(payload.getSecretsList())
+              return payload.getSecretsList() == null
                   ? ImmutableList.<Secret>of()
                   : payload.getSecretsList();
             }
@@ -209,7 +208,7 @@ public class SecretManagerServiceStubSettings
 
             @Override
             public Iterable<SecretVersion> extractResources(ListSecretVersionsResponse payload) {
-              return Objects.isNull(payload.getVersionsList())
+              return payload.getVersionsList() == null
                   ? ImmutableList.<SecretVersion>of()
                   : payload.getVersionsList();
             }

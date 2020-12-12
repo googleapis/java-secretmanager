@@ -38,7 +38,6 @@ import com.google.protobuf.Empty;
 import com.google.protobuf.FieldMask;
 import java.io.IOException;
 import java.util.List;
-import java.util.Objects;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
 
@@ -171,7 +170,7 @@ public class SecretManagerServiceClient implements BackgroundResource {
   public final ListSecretsPagedResponse listSecrets(ProjectName parent) {
     ListSecretsRequest request =
         ListSecretsRequest.newBuilder()
-            .setParent(Objects.isNull(parent) ? null : parent.toString())
+            .setParent(parent == null ? null : parent.toString())
             .build();
     return listSecrets(request);
   }
@@ -239,7 +238,7 @@ public class SecretManagerServiceClient implements BackgroundResource {
   public final Secret createSecret(ProjectName parent, String secretId, Secret secret) {
     CreateSecretRequest request =
         CreateSecretRequest.newBuilder()
-            .setParent(Objects.isNull(parent) ? null : parent.toString())
+            .setParent(parent == null ? null : parent.toString())
             .setSecretId(secretId)
             .setSecret(secret)
             .build();
@@ -309,7 +308,7 @@ public class SecretManagerServiceClient implements BackgroundResource {
   public final SecretVersion addSecretVersion(SecretName parent, SecretPayload payload) {
     AddSecretVersionRequest request =
         AddSecretVersionRequest.newBuilder()
-            .setParent(Objects.isNull(parent) ? null : parent.toString())
+            .setParent(parent == null ? null : parent.toString())
             .setPayload(payload)
             .build();
     return addSecretVersion(request);
@@ -366,9 +365,7 @@ public class SecretManagerServiceClient implements BackgroundResource {
    */
   public final Secret getSecret(SecretName name) {
     GetSecretRequest request =
-        GetSecretRequest.newBuilder()
-            .setName(Objects.isNull(name) ? null : name.toString())
-            .build();
+        GetSecretRequest.newBuilder().setName(name == null ? null : name.toString()).build();
     return getSecret(request);
   }
 
@@ -452,9 +449,7 @@ public class SecretManagerServiceClient implements BackgroundResource {
    */
   public final void deleteSecret(SecretName name) {
     DeleteSecretRequest request =
-        DeleteSecretRequest.newBuilder()
-            .setName(Objects.isNull(name) ? null : name.toString())
-            .build();
+        DeleteSecretRequest.newBuilder().setName(name == null ? null : name.toString()).build();
     deleteSecret(request);
   }
 
@@ -505,7 +500,7 @@ public class SecretManagerServiceClient implements BackgroundResource {
   public final ListSecretVersionsPagedResponse listSecretVersions(SecretName parent) {
     ListSecretVersionsRequest request =
         ListSecretVersionsRequest.newBuilder()
-            .setParent(Objects.isNull(parent) ? null : parent.toString())
+            .setParent(parent == null ? null : parent.toString())
             .build();
     return listSecretVersions(request);
   }
@@ -579,9 +574,7 @@ public class SecretManagerServiceClient implements BackgroundResource {
    */
   public final SecretVersion getSecretVersion(SecretVersionName name) {
     GetSecretVersionRequest request =
-        GetSecretVersionRequest.newBuilder()
-            .setName(Objects.isNull(name) ? null : name.toString())
-            .build();
+        GetSecretVersionRequest.newBuilder().setName(name == null ? null : name.toString()).build();
     return getSecretVersion(request);
   }
 
@@ -647,7 +640,7 @@ public class SecretManagerServiceClient implements BackgroundResource {
   public final AccessSecretVersionResponse accessSecretVersion(SecretVersionName name) {
     AccessSecretVersionRequest request =
         AccessSecretVersionRequest.newBuilder()
-            .setName(Objects.isNull(name) ? null : name.toString())
+            .setName(name == null ? null : name.toString())
             .build();
     return accessSecretVersion(request);
   }
@@ -717,7 +710,7 @@ public class SecretManagerServiceClient implements BackgroundResource {
   public final SecretVersion disableSecretVersion(SecretVersionName name) {
     DisableSecretVersionRequest request =
         DisableSecretVersionRequest.newBuilder()
-            .setName(Objects.isNull(name) ? null : name.toString())
+            .setName(name == null ? null : name.toString())
             .build();
     return disableSecretVersion(request);
   }
@@ -787,7 +780,7 @@ public class SecretManagerServiceClient implements BackgroundResource {
   public final SecretVersion enableSecretVersion(SecretVersionName name) {
     EnableSecretVersionRequest request =
         EnableSecretVersionRequest.newBuilder()
-            .setName(Objects.isNull(name) ? null : name.toString())
+            .setName(name == null ? null : name.toString())
             .build();
     return enableSecretVersion(request);
   }
@@ -858,7 +851,7 @@ public class SecretManagerServiceClient implements BackgroundResource {
   public final SecretVersion destroySecretVersion(SecretVersionName name) {
     DestroySecretVersionRequest request =
         DestroySecretVersionRequest.newBuilder()
-            .setName(Objects.isNull(name) ? null : name.toString())
+            .setName(name == null ? null : name.toString())
             .build();
     return destroySecretVersion(request);
   }
