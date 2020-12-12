@@ -227,7 +227,7 @@ public class SecretManagerServiceClient implements BackgroundResource {
    *
    * @param parent Required. The resource name of the project to associate with the
    *     [Secret][google.cloud.secretmanager.v1.Secret], in the format `projects/&#42;`.
-   * @param secret_id Required. This must be unique within the project.
+   * @param secretId Required. This must be unique within the project.
    *     <p>A secret ID is a string with a maximum length of 255 characters and can contain
    *     uppercase and lowercase letters, numerals, and the hyphen (`-`) and underscore (`_`)
    *     characters.
@@ -252,7 +252,7 @@ public class SecretManagerServiceClient implements BackgroundResource {
    *
    * @param parent Required. The resource name of the project to associate with the
    *     [Secret][google.cloud.secretmanager.v1.Secret], in the format `projects/&#42;`.
-   * @param secret_id Required. This must be unique within the project.
+   * @param secretId Required. This must be unique within the project.
    *     <p>A secret ID is a string with a maximum length of 255 characters and can contain
    *     uppercase and lowercase letters, numerals, and the hyphen (`-`) and underscore (`_`)
    *     characters.
@@ -409,7 +409,7 @@ public class SecretManagerServiceClient implements BackgroundResource {
    *
    * @param secret Required. [Secret][google.cloud.secretmanager.v1.Secret] with updated field
    *     values.
-   * @param update_mask Required. Specifies the fields to be updated.
+   * @param updateMask Required. Specifies the fields to be updated.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final Secret updateSecret(Secret secret, FieldMask updateMask) {
