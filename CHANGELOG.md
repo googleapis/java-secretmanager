@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.7.0](https://www.github.com/googleapis/java-secretmanager/compare/v1.6.4...v1.7.0) (2021-08-04)
+
+
+### Features
+
+* configure initial sp version ([#549](https://www.github.com/googleapis/java-secretmanager/issues/549)) ([5610a55](https://www.github.com/googleapis/java-secretmanager/commit/5610a55bc9112fc736e73a495e3a9035186ba4d1))
+
 ### [1.6.4](https://www.github.com/googleapis/java-secretmanager/compare/v1.6.3...v1.6.4) (2021-07-01)
 
 
