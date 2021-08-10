@@ -16,7 +16,6 @@
 
 package com.google.cloud.secretmanager.v1;
 
-import com.google.api.core.ApiFunction;
 import com.google.api.core.ApiFuture;
 import com.google.api.core.ApiFutures;
 import com.google.api.core.BetaApi;
@@ -1794,14 +1793,7 @@ public class SecretManagerServiceClient implements BackgroundResource {
       ApiFuture<ListSecretsPage> futurePage =
           ListSecretsPage.createEmptyPage().createPageAsync(context, futureResponse);
       return ApiFutures.transform(
-          futurePage,
-          new ApiFunction<ListSecretsPage, ListSecretsPagedResponse>() {
-            @Override
-            public ListSecretsPagedResponse apply(ListSecretsPage input) {
-              return new ListSecretsPagedResponse(input);
-            }
-          },
-          MoreExecutors.directExecutor());
+          futurePage, input -> new ListSecretsPagedResponse(input), MoreExecutors.directExecutor());
     }
 
     private ListSecretsPagedResponse(ListSecretsPage page) {
@@ -1875,12 +1867,7 @@ public class SecretManagerServiceClient implements BackgroundResource {
           ListSecretVersionsPage.createEmptyPage().createPageAsync(context, futureResponse);
       return ApiFutures.transform(
           futurePage,
-          new ApiFunction<ListSecretVersionsPage, ListSecretVersionsPagedResponse>() {
-            @Override
-            public ListSecretVersionsPagedResponse apply(ListSecretVersionsPage input) {
-              return new ListSecretVersionsPagedResponse(input);
-            }
-          },
+          input -> new ListSecretVersionsPagedResponse(input),
           MoreExecutors.directExecutor());
     }
 
