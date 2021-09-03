@@ -4,22 +4,22 @@
       "git": {
         "name": ".",
         "remote": "https://github.com/googleapis/java-secretmanager.git",
-        "sha": "ed6bbfc5112dc90ab43c601ac656d54efa626cf2"
+        "sha": "d9eb9ec47a3f578d9870c2259f57cbaf783ac361"
       }
     },
     {
       "git": {
         "name": "googleapis",
         "remote": "https://github.com/googleapis/googleapis.git",
-        "sha": "2948f31dd210514f87ce6e1e08bce48ecf4660d1",
-        "internalRef": "387156636"
+        "sha": "e1738ee972b49fd0c4d4718b035444495142b781",
+        "internalRef": "391407209"
       }
     },
     {
       "git": {
         "name": "synthtool",
         "remote": "https://github.com/googleapis/synthtool.git",
-        "sha": "ff01716e16d2c6e87eaf87197b753ac9fcbbed5d"
+        "sha": "ad7fd76e17bf9494a3e47ff9cf445f61564432e0"
       }
     }
   ],
@@ -53,6 +53,7 @@
     ".github/generated-files-bot.yml",
     ".github/readme/synth.py",
     ".github/release-please.yml",
+    ".github/release-trigger.yml",
     ".github/snippet-bot.yml",
     ".github/sync-repo-settings.yaml",
     ".github/trusted-contribution.yml",
@@ -188,7 +189,6 @@
     "proto-google-cloud-secretmanager-v1/src/main/java/com/google/cloud/secretmanager/v1/SecretVersionOrBuilder.java",
     "proto-google-cloud-secretmanager-v1/src/main/java/com/google/cloud/secretmanager/v1/ServiceProto.java",
     "proto-google-cloud-secretmanager-v1/src/main/java/com/google/cloud/secretmanager/v1/Topic.java",
-    "proto-google-cloud-secretmanager-v1/src/main/java/com/google/cloud/secretmanager/v1/TopicName.java",
     "proto-google-cloud-secretmanager-v1/src/main/java/com/google/cloud/secretmanager/v1/TopicOrBuilder.java",
     "proto-google-cloud-secretmanager-v1/src/main/java/com/google/cloud/secretmanager/v1/UpdateSecretRequest.java",
     "proto-google-cloud-secretmanager-v1/src/main/java/com/google/cloud/secretmanager/v1/UpdateSecretRequestOrBuilder.java",
