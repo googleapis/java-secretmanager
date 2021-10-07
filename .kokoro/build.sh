@@ -70,22 +70,7 @@ integration)
     RETURN_CODE=$?
     ;;
 graalvm)
-    # Install GraalVM
-    graalvmDir=${KOKORO_ARTIFACTS_DIR}/graalvm
-    mkdir ${graalvmDir}
-    retry_with_backoff 3 10 \
-      curl --fail --show-error --silent --location \
-      https://github.com/graalvm/graalvm-ce-builds/releases/download/vm-21.2.0/graalvm-ce-java11-linux-amd64-21.2.0.tar.gz \
-      | tar xz --directory ${graalvmDir} --strip-components=1
-
-    # Set GraalVM as the Java installation
-    export JAVA_HOME=${graalvmDir}
-    export PATH="$JAVA_HOME/bin:$PATH"
-
-    # Install Native Image
-    gu install native-image
-
-    # Run Unit and Integration Tests
+    # Run Unit and Integration Tests with Native Image
     mvn test -Pnative -Penable-integration-tests
     ;;
 samples)
