@@ -62,8 +62,9 @@ public class NativeImageSecretManagerSampleIT {
   public void testCreateAndPrintSecret() throws IOException {
     try (SecretManagerServiceClient client = SecretManagerServiceClient.create()) {
       NativeImageSecretManagerSample.createSecret(client, PROJECT_ID, NATIVE_TEST_SECRET_ID);
-      SecretVersion version = NativeImageSecretManagerSample.addSecretVersion(client, PROJECT_ID,
-          NATIVE_TEST_SECRET_ID);
+      SecretVersion version =
+          NativeImageSecretManagerSample.addSecretVersion(
+              client, PROJECT_ID, NATIVE_TEST_SECRET_ID);
       NativeImageSecretManagerSample.printSecretVersion(client, version);
       assertThat(bout.toString()).contains("Reading secret value: Hello World");
     }

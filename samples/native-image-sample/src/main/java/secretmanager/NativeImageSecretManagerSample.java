@@ -37,9 +37,7 @@ public class NativeImageSecretManagerSample {
 
   private static final String NATIVE_TEST_SECRET_ID = "native-secretmanager-test-secret";
 
-  /**
-   * Runs the Secret Manager sample application.
-   */
+  /** Runs the Secret Manager sample application. */
   public static void main(String[] args) throws IOException {
     String projectId = ServiceOptions.getDefaultProjectId();
 
@@ -55,8 +53,7 @@ public class NativeImageSecretManagerSample {
     }
   }
 
-  static void createSecret(
-      SecretManagerServiceClient client, String projectId, String secretId) {
+  static void createSecret(SecretManagerServiceClient client, String projectId, String secretId) {
 
     Secret secret =
         Secret.newBuilder()
@@ -70,8 +67,7 @@ public class NativeImageSecretManagerSample {
     System.out.println("Created secret: " + createdSecret.getName());
   }
 
-  static boolean hasSecret(
-      SecretManagerServiceClient client, String projectId, String secretId) {
+  static boolean hasSecret(SecretManagerServiceClient client, String projectId, String secretId) {
 
     ProjectName projectName = ProjectName.of(projectId);
     ListSecretsPagedResponse pagedResponse = client.listSecrets(projectName);
@@ -91,17 +87,14 @@ public class NativeImageSecretManagerSample {
 
     SecretName secretName = SecretName.of(projectId, secretId);
     SecretPayload payload =
-        SecretPayload.newBuilder()
-            .setData(ByteString.copyFromUtf8("Hello World"))
-            .build();
+        SecretPayload.newBuilder().setData(ByteString.copyFromUtf8("Hello World")).build();
 
     SecretVersion version = client.addSecretVersion(secretName, payload);
     System.out.println("Added Secret Version: " + version.getName());
     return version;
   }
 
-  static void printSecretVersion(
-      SecretManagerServiceClient client, SecretVersion version) {
+  static void printSecretVersion(SecretManagerServiceClient client, SecretVersion version) {
     AccessSecretVersionResponse response = client.accessSecretVersion(version.getName());
     String payload = response.getPayload().getData().toStringUtf8();
     System.out.println("Reading secret value: " + payload);
