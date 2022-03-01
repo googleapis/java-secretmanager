@@ -68,6 +68,8 @@
         <configuration>
           <archive>
             <manifest>
+              <addClasspath>true</addClasspath>
+              <classpathPrefix>dependency-jars/</classpathPrefix>
               <mainClass>secretmanager.NativeImageSecretManagerSample</mainClass>
             </manifest>
           </archive>
