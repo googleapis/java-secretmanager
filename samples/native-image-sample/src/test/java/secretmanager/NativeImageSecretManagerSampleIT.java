@@ -36,13 +36,11 @@ public class NativeImageSecretManagerSampleIT {
   private static final String NATIVE_TEST_SECRET_ID = "native-test-secret" + UUID.randomUUID();
   private static String PROJECT_ID = ServiceOptions.getDefaultProjectId();
   private ByteArrayOutputStream bout;
-  private PrintStream out;
 
   @Before
   public void setUp() {
     bout = new ByteArrayOutputStream();
-    out = new PrintStream(bout);
-    System.setOut(out);
+    System.setOut(new PrintStream(bout));
   }
 
   @AfterClass
