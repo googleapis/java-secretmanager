@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.1.7](https://github.com/googleapis/java-secretmanager/compare/v2.1.6...v2.1.7) (2022-10-12)
+
+
+### Dependencies
+
+* Regenerating with new Protobuf (2.1.x) ([#886](https://github.com/googleapis/java-secretmanager/issues/886)) ([75dfede](https://github.com/googleapis/java-secretmanager/commit/75dfedefb4dc554b46d0f9f397d04b91b2befc31))
+
 ### [2.1.6](https://github.com/googleapis/java-secretmanager/compare/v2.1.5...v2.1.6) (2022-04-15)
 
 
