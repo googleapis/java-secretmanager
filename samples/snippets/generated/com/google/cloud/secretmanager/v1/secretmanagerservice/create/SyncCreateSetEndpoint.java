@@ -16,35 +16,27 @@
 
 package com.google.cloud.secretmanager.v1.samples;
 
-// [START secretmanager_v1_generated_SecretManagerServiceSettings_CreateSecret_sync]
+// [START secretmanager_v1_generated_SecretManagerService_Create_SetEndpoint_sync]
+import com.google.cloud.secretmanager.v1.SecretManagerServiceClient;
 import com.google.cloud.secretmanager.v1.SecretManagerServiceSettings;
-import java.time.Duration;
+import com.google.cloud.secretmanager.v1.myEndpoint;
 
-public class SyncCreateSecret {
+public class SyncCreateSetEndpoint {
 
   public static void main(String[] args) throws Exception {
-    syncCreateSecret();
+    syncCreateSetEndpoint();
   }
 
-  public static void syncCreateSecret() throws Exception {
+  public static void syncCreateSetEndpoint() throws Exception {
     // This snippet has been automatically generated and should be regarded as a code template only.
     // It will require modifications to work:
     // - It may require correct/in-range values for request initialization.
     // - It may require specifying regional endpoints when creating the service client as shown in
     // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
-    SecretManagerServiceSettings.Builder secretManagerServiceSettingsBuilder =
-        SecretManagerServiceSettings.newBuilder();
-    secretManagerServiceSettingsBuilder
-        .createSecretSettings()
-        .setRetrySettings(
-            secretManagerServiceSettingsBuilder
-                .createSecretSettings()
-                .getRetrySettings()
-                .toBuilder()
-                .setTotalTimeout(Duration.ofSeconds(30))
-                .build());
     SecretManagerServiceSettings secretManagerServiceSettings =
-        secretManagerServiceSettingsBuilder.build();
+        SecretManagerServiceSettings.newBuilder().setEndpoint(myEndpoint).build();
+    SecretManagerServiceClient secretManagerServiceClient =
+        SecretManagerServiceClient.create(secretManagerServiceSettings);
   }
 }
-// [END secretmanager_v1_generated_SecretManagerServiceSettings_CreateSecret_sync]
+// [END secretmanager_v1_generated_SecretManagerService_Create_SetEndpoint_sync]

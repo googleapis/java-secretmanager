@@ -16,35 +16,37 @@
 
 package com.google.cloud.secretmanager.v1.samples;
 
-// [START secretmanager_v1_generated_SecretManagerServiceSettings_CreateSecret_sync]
-import com.google.cloud.secretmanager.v1.SecretManagerServiceSettings;
-import java.time.Duration;
+// [START secretmanager_v1_generated_SecretManagerService_ListSecrets_sync]
+import com.google.cloud.secretmanager.v1.ListSecretsRequest;
+import com.google.cloud.secretmanager.v1.ProjectName;
+import com.google.cloud.secretmanager.v1.Secret;
+import com.google.cloud.secretmanager.v1.SecretManagerServiceClient;
 
-public class SyncCreateSecret {
+public class SyncListSecrets {
 
   public static void main(String[] args) throws Exception {
-    syncCreateSecret();
+    syncListSecrets();
   }
 
-  public static void syncCreateSecret() throws Exception {
+  public static void syncListSecrets() throws Exception {
     // This snippet has been automatically generated and should be regarded as a code template only.
     // It will require modifications to work:
     // - It may require correct/in-range values for request initialization.
     // - It may require specifying regional endpoints when creating the service client as shown in
     // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
-    SecretManagerServiceSettings.Builder secretManagerServiceSettingsBuilder =
-        SecretManagerServiceSettings.newBuilder();
-    secretManagerServiceSettingsBuilder
-        .createSecretSettings()
-        .setRetrySettings(
-            secretManagerServiceSettingsBuilder
-                .createSecretSettings()
-                .getRetrySettings()
-                .toBuilder()
-                .setTotalTimeout(Duration.ofSeconds(30))
-                .build());
-    SecretManagerServiceSettings secretManagerServiceSettings =
-        secretManagerServiceSettingsBuilder.build();
+    try (SecretManagerServiceClient secretManagerServiceClient =
+        SecretManagerServiceClient.create()) {
+      ListSecretsRequest request =
+          ListSecretsRequest.newBuilder()
+              .setParent(ProjectName.of("[PROJECT]").toString())
+              .setPageSize(883849137)
+              .setPageToken("pageToken873572522")
+              .setFilter("filter-1274492040")
+              .build();
+      for (Secret element : secretManagerServiceClient.listSecrets(request).iterateAll()) {
+        // doThingsWith(element);
+      }
+    }
   }
 }
-// [END secretmanager_v1_generated_SecretManagerServiceSettings_CreateSecret_sync]
+// [END secretmanager_v1_generated_SecretManagerService_ListSecrets_sync]
